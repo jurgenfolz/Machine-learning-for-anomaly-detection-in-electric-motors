@@ -5,7 +5,7 @@ Authors: Klaus Jürgen Folz, Herbert Martins Gomes<br />
 Universidade Federal do Rio Grande do Sul, Departament of Mechanical Engineering<br />
 Data available in https://www02.smt.ufrj.br/~offshore/mfs/page_01.html
 
-Abstract:<br />
+ABSTRACT <br />
 Machine maintenance requires continuous improvement of techniques and 
 equipment for monitoring equipment operating parameters. The financial gains in 
 avoiding catastrophic and cascading problems in industrial plants due to failures far 
@@ -21,7 +21,7 @@ SVM model obtained a mean accuracy of 100 % for the MFCCs obtained from the
 vibration signals and 69.6% for the audio signal. The RF had a mean accuracy of 99.15% 
 for the MFCCs from the vibration signals and 63.82% for the audio signal.
 
-1. INTRODUCTION <br />
+1 INTRODUCTION <br />
 Modern electric motors are found in the most diverse activities, in which force and 
 torque are required to move turbines, boilers, conveyors and other components. Problems 
 such as misalignment, imbalance and coupling issues can lead to dangerous conditions or 
@@ -76,9 +76,9 @@ conditioned to the quality of the training data.
 An unsupervised machine learning model for condition monitoring of rotating 
 machines using an anomaly detection approach was studied by [1]. Effectiveness was 
 evaluated by comparing the automatically generated results with a manual dataset by 
-training an Isolation Forest model achieving an average F1-score of 99.6%.
+training an Isolation Forest model achieving an average F1-score of 99.6%.<br />
 
-2. THEORETICAL BACKGROUND <br />
+2 THEORETICAL BACKGROUND <br />
 2.1 Support Vector Machine (SVM) <br />
 SVM is a supervised learning classifier, used both in classification and for regression 
 analysis, clustering and other machine learning applications using a geometric concept 
@@ -131,7 +131,7 @@ MFCC is explained below.<br />
     coefficients and produces a set of cepstral coefficients, the MFCCs.
 
 
-3. DATA PROCESING<br />
+3 DATA PROCESING<br />
 A single measurement represents 5 seconds for each class, representing 250,000 
 points in time. Thus, the 1951 files with their 487.75 million rows and 8 columns were 
 iteratively imported to calculate the MFCCs. To save RAM memory, the vibration signal 
@@ -163,9 +163,9 @@ random state is fixed, allowing reproducibility of tests and validations and com
 results for different algorithms and different iterations. The training data represents 70% of the original set, that is, 1,366 samples 
 containing 32,128,320 coefficients calculated from the vibration signals and 5,354,720 
 for the audio signal. The test data contains 585 different samples, 30% of the original set, 
-with 13,759,200 MFCCs for vibration signals and 2,293,200 for the sound wave. 
+with 13,759,200 MFCCs for vibration signals and 2,293,200 for the sound wave. <br />
 
-4. DISCUSSION <br />
+4 DISCUSSION <br />
 The SVM model with the polynomial Kernel function, degree (d) and constant (r) 
 equal to 3 and regularization parameter (C) equal to 10 provided an error-free 
 classification with 100% average accuracy for the MFCCs calculated from the vibration 
@@ -212,9 +212,9 @@ better mean accuracy of 69.6% from the SVM model. Although the results obtained 
 audio signal were not adequate, the application of models of this type in real situations in 
 the industry would be less complex and of lower cost, when compared to the application 
 using accelerometers, due to the cost of this equipment and the complexity of their 
-configuration in a machine.
+configuration in a machine.<br />
 
-5. REFERENCES <br />
+5 REFERENCES <br />
 [1] AHMADs S.; STYP-REKOWSKI, K.; NEDELKOSKI, S; O. KAO, Autoencoderbased Condition Monitoring and Anomaly Detection Method for Rotating 
 Machines. 2020 IEEE International Conference on Big Data (Big Data), 2020, p. 
 4093-4102. https://doi.org/10.48550/arXiv.2101.11539 <br />
