@@ -1,11 +1,11 @@
 # Machine learning for anomaly detection in electric motors
  A study of machine learning algorithms for anomaly detection in electric motors by vibration and audio signals
 
-Authors: Klaus Jürgen Folz, Herbert Martins Gomes
-Universidade Federal do Rio Grande do Sul, Departament of Mechanical Engineering
+Authors: Klaus Jürgen Folz, Herbert Martins Gomes<br />
+Universidade Federal do Rio Grande do Sul, Departament of Mechanical Engineering<br />
 Data available in https://www02.smt.ufrj.br/~offshore/mfs/page_01.html
 
-Abstract:
+Abstract:<br />
 Machine maintenance requires continuous improvement of techniques and 
 equipment for monitoring equipment operating parameters. The financial gains in 
 avoiding catastrophic and cascading problems in industrial plants due to failures far 
@@ -21,7 +21,7 @@ SVM model obtained a mean accuracy of 100 % for the MFCCs obtained from the
 vibration signals and 69.6% for the audio signal. The RF had a mean accuracy of 99.15% 
 for the MFCCs from the vibration signals and 63.82% for the audio signal.
 
-1. INTRODUCTION 
+1. INTRODUCTION <br />
 Modern electric motors are found in the most diverse activities, in which force and 
 torque are required to move turbines, boilers, conveyors and other components. Problems 
 such as misalignment, imbalance and coupling issues can lead to dangerous conditions or 
@@ -78,8 +78,8 @@ machines using an anomaly detection approach was studied by [1]. Effectiveness w
 evaluated by comparing the automatically generated results with a manual dataset by 
 training an Isolation Forest model achieving an average F1-score of 99.6%.
 
-2. THEORETICAL BACKGROUND 
-2.1 Support Vector Machine (SVM) 
+2. THEORETICAL BACKGROUND <br />
+2.1 Support Vector Machine (SVM) <br />
 SVM is a supervised learning classifier, used both in classification and for regression 
 analysis, clustering and other machine learning applications using a geometric concept 
 called hyperplane (decision limit). The purpose of the SVM algorithm is to compute a 
@@ -92,7 +92,7 @@ need for the separation between the points and the hyperplane being as large as 
 for all classes. Therefore, the objective becomes to calculate the plane that has the 
 maximum distance between the data points of the classes.
 
-2.2 Random Forests 
+2.2 Random Forests <br />
 [5] devised and developed the first Random Forests (RF) algorithm using a random 
 subspace method. Later the model was improved by Leo Breiman and Adele Cutler [4]. 
 The random forest algorithm is defined by [4] as a combination of decision tree predictors, 
@@ -109,7 +109,7 @@ different values for the total number of trees used in the forest and the maximu
 of each tree are commonly tested for in-depth assessments of the model's accuracy. 
 
 
-2.3 Mel Frequency Cepstral Coefficients (MFCCs) 
+2.3 Mel Frequency Cepstral Coefficients (MFCCs) <br />
 Mel Frequency Cepstral Coefficients (MFCCs) are attributes extracted from a wave 
 signal, widely applied in speech recognition algorithms. [8] interprets the coefficients as 
 a compact description of the shape of a spectral envelope of a signal. The MFCC feature 
@@ -117,7 +117,7 @@ extraction technique, according to [6] consists of splitting the signal into win
 calculating the Discrete Fourier Transform (DFT), obtaining the logarithm of magnitude 
 and the distortion of frequencies in a Mel scale, followed by the Inverse Discrete Cosine 
 Transform (DCT). The detailed description of the various steps involved in extracting the 
-MFCC is explained below.
+MFCC is explained below.<br />
 
     1. Splitting the signal into windows: The analysis should always be performed in short 
     segments in which the signal is approximately stationary. 
@@ -131,7 +131,7 @@ MFCC is explained below.
     coefficients and produces a set of cepstral coefficients, the MFCCs.
 
 
-3. DATA PROCESING
+3. DATA PROCESING<br />
 A single measurement represents 5 seconds for each class, representing 250,000 
 points in time. Thus, the 1951 files with their 487.75 million rows and 8 columns were 
 iteratively imported to calculate the MFCCs. To save RAM memory, the vibration signal 
@@ -165,7 +165,7 @@ containing 32,128,320 coefficients calculated from the vibration signals and 5,3
 for the audio signal. The test data contains 585 different samples, 30% of the original set, 
 with 13,759,200 MFCCs for vibration signals and 2,293,200 for the sound wave. 
 
-4. DISCUSSION 
+4. DISCUSSION <br />
 The SVM model with the polynomial Kernel function, degree (d) and constant (r) 
 equal to 3 and regularization parameter (C) equal to 10 provided an error-free 
 classification with 100% average accuracy for the MFCCs calculated from the vibration 
@@ -214,70 +214,70 @@ the industry would be less complex and of lower cost, when compared to the appli
 using accelerometers, due to the cost of this equipment and the complexity of their 
 configuration in a machine.
 
-5. REFERENCES 
+5. REFERENCES <br />
 [1] AHMADs S.; STYP-REKOWSKI, K.; NEDELKOSKI, S; O. KAO, Autoencoderbased Condition Monitoring and Anomaly Detection Method for Rotating 
 Machines. 2020 IEEE International Conference on Big Data (Big Data), 2020, p. 
-4093-4102. https://doi.org/10.48550/arXiv.2101.11539 
+4093-4102. https://doi.org/10.48550/arXiv.2101.11539 <br />
 [2] ANTONI, L.; ZIEMOWIT, D.; PIOTR, C. An anomaly detection method for 
 rotating machinery monitoring based on the most representative data. Journal of 
 Vibroengineering Vol. 23, Issue 4, 2021, p. 861-876. 
-https://doi.org/10.21595/jve.2021.21622 
+https://doi.org/10.21595/jve.2021.21622 <br />
 [3] ARALTO, A. Manutenção Preditiva: Usando Análise de Vibrações. São Paulo: 
-Manole, 2004. 
+Manole, 2004. <br />
 [4] BREIMAN, L. Random Forests. Machine Learning, v. 45, p. 5–32, 2001. 
-https://doi.org/10.1023/A:1010933404324 
+https://doi.org/10.1023/A:1010933404324 <br />
 [5] HO, TIN KAM (1995). Random Decision Forests. Proceedings of the 3rd 
 International Conference on Document Analysis and Recognition. Montreal, QC, 14–
-16 August 1995. pp. 278–282. https://doi.org/10.1109/ICDAR.1995.598994 
+16 August 1995. pp. 278–282. https://doi.org/10.1109/ICDAR.1995.598994 <br />
 [6] K.S. RAO AND MANJUNATH K.E., Speech Recognition Using Articulatory and 
 Excitation Source Features. Springer Briefs in Speech Technology, 2017. 
-https://doi.org/10.1007/978-3-319-49220-9 
+https://doi.org/10.1007/978-3-319-49220-9 <br />
 [7] LEE, S.; YU, H.; YANG, H.; SONG, I.; CHOI, J.; YANG, J.; LIM, G.; KIM, K.-S.; 
 CHOI, B. Kwon, J. A Study on Deep Learning Application of Vibration Data and 
 Visualization of Defects for Predictive Maintenance of Gravity Acceleration 
-Equipment. Appl. Sci. vol. 11, p. 1564, 2021. https://doi.org/10.3390/app11041564 
+Equipment. Appl. Sci. vol. 11, p. 1564, 2021. https://doi.org/10.3390/app11041564 <br />
 [8] LERCH, A. An introduction to audio content analysis: Applications in signal 
 processing and music informatics. [s.l.] Wiley-IEEE Press, 2012. 
-https://doi.org/10.1002/9781118393550 
+https://doi.org/10.1002/9781118393550 <br />
 [9] MAFAULDA. COPPE/Poli/UFRJ. (2014). Machinery Fault Database – 
 MAFAULDA. Available: http://www02.smt.ufrj.br/~offshore/mfs/page_01.html. 
-Access in: 21/09/2021. 
+Access in: 21/09/2021. <br />
 [10] MCFEE, B. et al. librosa/librosa: 0.8.0. 22 July 2020. 
-https://doi.org/10.25080/Majora-7b98e3ed-003 
+https://doi.org/10.25080/Majora-7b98e3ed-003 <br />
 [11] PEDERSEN, R.; SCHOEBERL, M. (2006). An Embedded Support Vector 
 Machine. In Proceedings of the Fourth Workshop on Intelligent Solutions in 
 Embedded Systems. WISES, 2006, pp. 79-89. 
-http://hdl.handle.net/20.500.12708/51591 
+http://hdl.handle.net/20.500.12708/51591 <br />
 [12] PEDREGOSA ET AL. Scikit-learn: Machine Learning in Python. Journal of 
-Machine Learning Research, v. 12, p. 2825–2830, 2011. http://scikitlearn.sourceforge.net 
-[13] PITTINO, F., PUGGL M., MOLDASCHL, T., HIRSCHL, C. Automatic Anomaly 
+Machine Learning Research, v. 12, p. 2825–2830, 2011. http://scikitlearn.sourceforge.net <br />
+[13] PITTINO, F., PUGGL M., MOLDASCHL, T., HIRSCHL, C. Automatic Anomaly <br />
 Detection on In-Production Manufacturing Machines Using Statistical Learning 
-Methods. Sensors. v. 20, p. 8: 2344, 2020. https://doi.org/10.3390/s20082344 
+Methods. Sensors. v. 20, p. 8: 2344, 2020. https://doi.org/10.3390/s20082344 <br />
 [14] PRATI, R. C.; BATISTA, G. E. A. P. A; MONARD, M. C., Evaluating Classifiers 
 Using ROC Curves. IEEE Latin America Transactions, vol. 6, no. 2, pp. 215-222, 
-June 2008. https://doi.org/10.1109/TLA.2008.4609920 
+June 2008. https://doi.org/10.1109/TLA.2008.4609920 <br />
 [15] PYTHON. Support Vector Machine Python Example. Towards data science. 
-Access in: 15/07/2021. Available: https://towardsdatascience.com/ support-vectormachine-python-example-d67d9b63f1c8 
+Access in: 15/07/2021. Available: https://towardsdatascience.com/ support-vectormachine-python-example-d67d9b63f1c8 <br />
 [16] SCIKIT. Support Vector Machines – Scikit-Learn Documentation. Available: 
 https://scikit-learn.org/stable/modules/svm.html#mathematical-formulation. Access 
-in: 11/10/2021. 
+in: 11/10/2021. <br />
 [17] SIRIKULVIRIYA, NAPHAPORN AND SUKREE SINTHUPINYO. Integration of 
 Rules from a Random Forest. International Conference on Information and 
-Electronics Engineering IPCSIT vol.6, 2011. 
+Electronics Engineering IPCSIT vol.6, 2011. <br />
 [18] SpectraQuest. SpectraQuest, Inc. Available: https://spectraquest.com/ Acess in: 
-21/09/2021. 
+21/09/2021. <br />
 [19] VAPNIK, V. N. The Nature of Statistical Learning Theory. Springer, NY, 1995. 
-https://doi.org/10.1007/978-1-4757-2440-0 
+https://doi.org/10.1007/978-1-4757-2440-0 <br />
 [20] ZHANG, X.; JIANG, D.; HAN, T.; WANG, N.; YANG, W.; YANG, Y. Rotating 
 Machinery Fault Diagnosis for Imbalanced Data Based on Fast Clustering 
 Algorithm and Support Vector Machine. Journal of Sensors, Beijing, China, v. 
-2017, p.0-15, 2017. https://doi.org/10.1155/2017/8092691 
+2017, p.0-15, 2017. https://doi.org/10.1155/2017/8092691 <br />
 [21] HORNING, N. Random Forests: An algorithm for image classification and 
-generation of continuous fields data sets, 2010. 
+generation of continuous fields data sets, 2010. <br />
 [22] GAVRISHCHAKA, V.; GANGULI, S. Support vector machine as an efficient tool 
 for high-dimensional data processing: Application to substorm forecasting. 
 Journal of Geophysical Research. 106. 29911-29914, 2001. 
-https://doi.org/10.1029/2001JA900118 
+https://doi.org/10.1029/2001JA900118 <br />
 [23] SCIKIT. Metrics and scoring: quantifying the quality of predictions. Available: 
 https://scikit-learn.org/stable/modules/model_evaluation.html#roc-metrics. Access 
-in: 07/11/2021.
+in: 07/11/2021.<br />
